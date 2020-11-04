@@ -1,0 +1,41 @@
+{
+    "declarative_table": {
+        "column": {
+            "id_column": true,
+            "severity": true,
+            "title": true,
+            "time_occurred": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "new_declarative_table": {
+        "column": {
+            "id_column": true,
+            "severity": true,
+            "title": true,
+            "time_occurred": true,
+            "opening_time": true,
+            "event_time": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "NEW_DECLARATIVE_TABLE_ID_COLUMN_DEMO_TABLE_SEVERITY_ID": true
+        },
+        "index": {
+            "NEW_DECLARATIVE_TABLE_SEVERITY": true
+        }
+    },
+    "demo_table": {
+        "column": {
+            "id": true,
+            "severity_id": true,
+            "title": true,
+            "time_occurred": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

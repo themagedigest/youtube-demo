@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="MageDigest_Demo::demo" title="MageDigest Demo" module="MageDigest_Demo" sortOrder="51" resource="MageDigest_Demo::helloworld"/>
+        <add id="MageDigest_Demo::post" title="Manage Posts" module="MageDigest_Demo" sortOrder="10" action="demo/post/index" resource="MageDigest_Demo::post" parent="MageDigest_Demo::demo"/>
+     </menu>
+</config>

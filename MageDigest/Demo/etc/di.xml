@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!--<type name="Magento\Checkout\Model\Cart">
+        <plugin name="beforeAddtoCart" type="MageDigest\Demo\Plugin\Cart" sortOrder="1" />
+        &lt;!&ndash;<plugin name="aroundAddtoCart" type="MageDigest\Demo\Plugin\Cart" sortOrder="2" />&ndash;&gt;
+    </type>
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="afterProductName" type="MageDigest\Demo\Plugin\Product" sortOrder="1" />
+    </type>
+    <type name="Magento\Checkout\Model\Cart">
+        <plugin name="aroundAddtoCart" type="MageDigest\Demo\Plugin\Cart" sortOrder="1" />
+    </type>-->
+</config>
