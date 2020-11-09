@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Custom_Purchased::purchased"
+             title="Orders"
+             translate="title"
+             module="Custom_Purchased"
+             sortOrder="60"
+             resource="Custom_Purchased::purchased"
+        />
+        <add
+            id="Custom_Purchased::listing"
+            title="Purchased order by Customer"
+            translate="title"
+            module="Custom_Purchased"
+            sortOrder="20"
+            parent="Custom_Purchased::purchased"
+            action="purchased/index/index"
+            resource="Custom_Purchased::purchased"
+        />
+      
+    </menu>
+</config>
