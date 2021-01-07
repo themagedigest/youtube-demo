@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="MageDigest\Grid\Ui\DataProvider\Category\ListingDataProvider">
+        <plugin name="md_grid_attributes" type="MageDigest\Grid\Plugin\AddAttributesToUiDataProvider"/>
+    </type>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="md_grid_category_listing_data_source" xsi:type="string">MdGridCategoryCollection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="MdGridCategoryCollection" type="MageDigest\Grid\Ui\DataProvider\Category\Listing\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">catalog_category_entity</argument>
+            <argument name="resourceModel" xsi:type="string">MageDigest\Grid\Model\ResourceModel\Category</argument>
+        </arguments>
+    </virtualType>
+</config>
