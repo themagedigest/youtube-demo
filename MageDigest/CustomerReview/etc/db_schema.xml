@@ -1,0 +1,11 @@
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+        <table name="md_customer_reviews">
+            <column xsi:type="int" name="entity_id" padding="10" unsigned="true" identity="true" nullable="false" comment="Entity Id"/>
+            <column xsi:type="varchar" name="email" nullable="false" length="255" comment="Customer Email"/>
+            <column xsi:type="varchar" name="review" nullable="false" length="255" comment="Review"/>
+            <constraint xsi:type="primary" referenceId="PRIMARY">
+                <column name="entity_id"/>
+            </constraint>
+        </table>
+</schema>
