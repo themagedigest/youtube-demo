@@ -4,6 +4,8 @@
             <column xsi:type="int" name="entity_id" padding="10" unsigned="true" identity="true" nullable="false" comment="Entity Id"/>
             <column xsi:type="varchar" name="email" nullable="false" length="255" comment="Customer Email"/>
             <column xsi:type="varchar" name="review" nullable="false" length="255" comment="Review"/>
+            <column xsi:type="smallint" name="approved" padding="5" unsigned="true" nullable="true" identity="false"
+                    default="0" comment="Approved"/>
             <constraint xsi:type="primary" referenceId="PRIMARY">
                 <column name="entity_id"/>
             </constraint>

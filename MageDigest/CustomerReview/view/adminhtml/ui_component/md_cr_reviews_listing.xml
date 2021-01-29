@@ -6,6 +6,14 @@
             <item name="deps" xsi:type="string">md_cr_reviews_listing.md_cr_reviews_listing_data_source</item>
         </item>
         <item name="spinner" xsi:type="string">md_cr_columns</item>
+        <item name="buttons" xsi:type="array">
+            <item name="add" xsi:type="array">
+                <item name="name" xsi:type="string">add</item>
+                <item name="label" xsi:type="string">Add New Review</item>
+                <item name="class" xsi:type="string">primary</item>
+                <item name="url" xsi:type="string">md_cr/index/new</item>
+            </item>
+        </item>
     </argument>
     <dataSource name="md_cr_reviews_listing_data_source">
         <argument name="dataProvider" xsi:type="configurableObject">
@@ -28,6 +36,48 @@
             </item>
         </argument>
     </dataSource>
+    <listingToolbar name="listing_top">
+        <bookmark name="bookmarks"/>
+        <columnsControls name="columns_controls"/>
+        <massaction name="listing_massaction">
+            <argument name="data" xsi:type="array">
+                <item name="data" xsi:type="array">
+                    <item name="selectProvider" xsi:type="string">md_cr_reviews_listing.md_cr_reviews_listing.md_cr_columns.ids</item>
+                    <item name="displayArea" xsi:type="string">bottom</item>
+                    <item name="component" xsi:type="string">Magento_Ui/js/grid/tree-massactions</item>
+                    <item name="indexField" xsi:type="string">entity_id</item>
+                </item>
+            </argument>
+            <action name="delete">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="type" xsi:type="string">delete</item>
+                        <item name="label" xsi:type="string" translate="true">Delete</item>
+                        <item name="url" xsi:type="url" path="md_cr/index/massDelete"/>
+                        <item name="confirm" xsi:type="array">
+                            <item name="title" xsi:type="string" translate="true">Delete items</item>
+                            <item name="message" xsi:type="string" translate="true">Are you sure you want to delete selected items?</item>
+                        </item>
+                    </item>
+                </argument>
+            </action>
+        </massaction>
+        <filters name="listing_filters">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="templates" xsi:type="array">
+                        <item name="filters" xsi:type="array">
+                            <item name="select" xsi:type="array">
+                                <item name="component" xsi:type="string">Magento_Ui/js/form/element/ui-select</item>
+                                <item name="template" xsi:type="string">ui/grid/filters/elements/ui-select</item>
+                            </item>
+                        </item>
+                    </item>
+                </item>
+            </argument>
+        </filters>
+        <paging name="listing_paging"/>
+    </listingToolbar>
     <columns name="md_cr_columns">
         <selectionsColumn name="ids">
             <argument name="data" xsi:type="array">
@@ -57,5 +107,10 @@
                 <label translate="true">Reviews</label>
             </settings>
         </column>
+        <actionsColumn name="actions" class="MageDigest\CustomerReview\Ui\Component\Review\Listing\Column\Actions" sortOrder="200">
+            <settings>
+                <indexField>entity_id</indexField>
+            </settings>
+        </actionsColumn>
     </columns>
 </listing>

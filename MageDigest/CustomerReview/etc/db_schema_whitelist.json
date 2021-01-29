@@ -1,0 +1,13 @@
+{
+    "md_customer_reviews": {
+        "column": {
+            "entity_id": true,
+            "email": true,
+            "review": true,
+            "approved": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}
